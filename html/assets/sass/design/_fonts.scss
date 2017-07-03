@@ -1,0 +1,32 @@
+$fonts-dir: '../fonts';
+
+
+@font-face {
+  font-family: 'Cachet Std';
+  src: url('#{$fonts-dir}/CachetStd-Medium.eot');
+  src: url('#{$fonts-dir}/CachetStd-Medium.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts-dir}/CachetStd-Medium.woff') format('woff'),
+    url('#{$fonts-dir}/CachetStd-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cachet Std';
+  src: url('#{$fonts-dir}/CachetStd-Bold.eot');
+  src: url('#{$fonts-dir}/CachetStd-Bold.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts-dir}/CachetStd-Bold.woff') format('woff'),
+    url('#{$fonts-dir}/CachetStd-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cachet Std';
+  src: url('#{$fonts-dir}/CachetStd-Book.eot');
+  src: url('#{$fonts-dir}/CachetStd-Book.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts-dir}/CachetStd-Book.woff') format('woff'),
+    url('#{$fonts-dir}/CachetStd-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

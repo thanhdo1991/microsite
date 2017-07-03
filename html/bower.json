@@ -1,0 +1,25 @@
+{
+  "name": "ymca-one",
+  "description": "HTML implementation of the YMCA One template",
+  "main": "index.html",
+  "authors": [
+    "Igor Putina"
+  ],
+  "license": "GPL-2.0",
+  "keywords": [
+    "template",
+    "responsive",
+    "drupal",
+    "ffw"
+  ],
+  "homepage": "https://github.com/makehero/ymca-one",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/js/vendor",
+    "test",
+    "tests"
+  ]
+}

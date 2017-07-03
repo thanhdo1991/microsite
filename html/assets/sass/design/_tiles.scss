@@ -1,0 +1,181 @@
+// Tile styles
+.tiles {
+    display:flex;
+    flex-wrap:wrap;
+    align-items: stretch;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    .tile {
+        flex: 1 0 40%;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        @media #{$small} {
+            flex: 1 0 80%;
+        }
+    }
+}
+
+.tile {
+    position: relative;
+    margin-bottom: 40px;
+    background-color: $color-light-gray;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: block;
+        background: -moz-linear-gradient(top, rgba($color-bluegray, 0) 50%, rgba($color-bluegray, .4) 75%, rgba($color-bluegray, .8) 100%);
+        background: -webkit-linear-gradient(top, rgba($color-bluegray, 0) 50%,rgba($color-bluegray, .4) 75%,rgba($color-bluegray, .8) 100%);
+        background: linear-gradient(to bottom, rgba($color-bluegray, 0) 50%,rgba($color-bluegray, .4) 75%,rgba($color-bluegray, .8) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000172a', endColorstr='#cc00172a',GradientType=0 );
+
+        @media #{$small} {
+            background: -moz-linear-gradient(top, rgba($color-bluegray, 0) 0%, rgba($color-bluegray, .8) 100%);
+            background: -webkit-linear-gradient(top, rgba($color-bluegray, 0) 0%,rgba($color-bluegray, .8) 100%);
+            background: linear-gradient(to bottom, rgba($color-bluegray, 0) 0%,rgba($color-bluegray, .8) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000172a', endColorstr='#cc00172a',GradientType=0 );
+        }
+    }
+
+    @media #{$small} {
+        margin-bottom: 20px;
+    }
+
+    // Responsive Squares
+    height: 0;
+    padding-bottom: 33.33%;
+
+    article {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 40px;
+
+        @media #{$small} {
+            padding: 30px;
+        }
+
+        @media #{$medium} {
+            padding: 30px;
+        }
+
+        @media #{$large} {
+            padding: 60px;
+        }
+
+        h2, h3, h4 {
+            color: $color-white;
+            margin-bottom: .5em;
+
+            @media #{$medium} {
+                text-shadow: 0px 1px 3px rgba($color-bluegray, 0.7);
+            }
+        }
+
+        p {
+            font-size: .8em;
+            color: $color-white;
+            margin-bottom: 1em;
+
+            @media #{$small} {
+                font-size: 1em;
+            }
+
+            @media #{$medium} {
+                text-shadow: 0px 1px 2px rgba($color-bluegray, 0.5);
+            }
+        }
+    }
+
+    @media #{$medium} {
+        padding-bottom: 50%;
+    }
+
+    @media #{$small} {
+        height: 0;
+        padding-bottom: 55%;
+    }
+
+    @media #{$tiny} {
+        height: 0;
+        padding-bottom: 70%;
+    }
+}
+
+.tiles .tile {
+    transition: all $base-duration $base-timing;
+}
+
+.tile[data-background-image^='project_files'],
+.tile[data-background-image^='http'] {
+    position: relative;
+
+    &:after {
+        content: "";
+        display: block;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity .5s ease, background .3s ease;
+
+        background: linear-gradient(300deg, #333, #888, #333);
+        background-size: 300% 300%;
+
+        -webkit-animation: ymca-one 30s ease infinite;
+        -moz-animation: ymca-one 30s ease infinite;
+        -o-animation: ymca-one 30s ease infinite;
+        animation: ymca-one 30s ease infinite;
+
+        opacity: .2;
+    }
+
+    filter: grayscale(40%);
+    transition: filter .5s ease;
+
+    &:hover {
+        &:after {
+            content: "";
+            display: block;
+            pointer-events: none;
+
+            background: linear-gradient(300deg, #0d28ff, #112146, #ff2869);
+            background-size: 300% 300%;
+
+            -webkit-animation: ymca-one 30s ease infinite;
+            -moz-animation: ymca-one 30s ease infinite;
+            -o-animation: ymca-one 30s ease infinite;
+            animation: ymca-one 30s ease infinite;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity .5s ease, background .3s ease;
+
+            opacity: .85;
+        }
+
+        filter: grayscale(0%);
+        transition: filter .5s ease;
+    }
+}

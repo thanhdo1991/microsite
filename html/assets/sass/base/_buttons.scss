@@ -1,0 +1,142 @@
+$button-height: 40px;
+
+@mixin button-color($bg-color, $fg-color: $color-white) {
+  color: $fg-color;
+  background-color: $bg-color;
+
+  &:hover {
+    background-color: shade($bg-color, 20%);
+    color: #fff;
+  }
+
+    &:disabled {
+      &:hover {
+        background-color: $bg-color;
+      }
+  }
+}
+
+#{$all-buttons} {
+  appearance: none;
+  background-color: $action-color;
+  border: 0;
+  border-radius: ($button-height / 2) + 3px;;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  line-height: $button-height;
+  padding: 0 ($base-spacing * 2);
+  padding-top: 2px; // Fix for Cachet
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: shade($action-color, 20%);
+    color: #fff;
+  }
+
+  &:focus {
+    outline: $focus-outline;
+    outline-offset: $focus-outline-offset;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $action-color;
+    }
+  }
+
+  @media #{$small} {
+    line-height: $button-height - 8px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  &.small {
+    font-size: .85em;
+    font-weight: bold;
+    padding: 0 ($base-spacing);
+    padding-top: 2px; // Fix for Cachet
+    line-height: $button-height - 5px;
+    border-radius: ($button-height / 2);
+
+    @media #{$small} {
+      line-height: $button-height - 10px;
+      border-radius: ($button-height / 2) - 4px;
+    }
+  }
+
+  &.large {
+    font-size: 1.4em;
+    padding: 0 ($base-spacing * 2);
+    padding-top: 5px; // Fix for Cachet
+    line-height: $button-height + 10px;
+    border-radius: ($button-height / 2) + 3px + 5px;
+
+    @media #{$medium} {
+      font-size: 1.2em;
+      padding: 0 ($base-spacing * 1.4);
+      padding-top: 5px; // Fix for Cachet
+      line-height: $button-height;
+      border-radius: ($button-height / 2) + 2px;
+    }
+
+    @media #{$small} {
+      font-size: 1em;
+      padding: 0 ($base-spacing * 1.5);
+      padding-top: 3px; // Fix for Cachet
+      line-height: $button-height;
+      border-radius: ($button-height / 2) + 2px;
+    }
+  }
+
+  // Colors
+
+  // Purple Buttons
+  &.purple {
+    @include button-color($color-purple, $color-white);
+  }
+
+  // Violet Buttons
+  &.violet {
+    @include button-color($color-violet, $color-white);
+  }
+
+  // Blue Buttons
+  &.blue {
+    @include button-color($color-blue, $color-white);
+  }
+
+  // Navy Buttons
+  &.navy {
+    @include button-color($color-navy, $color-white);
+  }
+
+   // Orange Buttons
+  &.orange {
+    @include button-color($color-orange, $color-white);
+  }
+
+  // Teal Buttons
+  &.teal {
+    @include button-color($color-teal, $color-white);
+  }
+
+  // Red Buttons
+  &.red {
+    @include button-color($color-red, $color-white);
+  }
+}
+
+

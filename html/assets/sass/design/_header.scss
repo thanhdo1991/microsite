@@ -1,0 +1,138 @@
+$light-gray-backgorund: #f8f8f8;
+$navigation-height: 96px;
+$give-button-color: $color-purple;
+
+#header > .container {
+    @include grid-container;
+
+    .left-content {
+        @include grid-column(2);
+
+        @media #{$medium} {
+            @include grid-column(2, $small-grid);
+        }
+    }
+
+    .right-content {
+        @include grid-column(4);
+
+        @media #{$small} {
+            @include grid-column(4, $small-grid);
+        }
+    }
+}
+
+#header {
+    padding: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    background-color: $light-gray-backgorund;
+
+    .logo {
+        height: $navigation-height;
+        padding-top: 14px;
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            line-height: $navigation-height;
+            font-size: 1.4em;
+        }
+
+        h1 > a {
+            display: block;
+            float: left;
+            font-weight: bold;
+            text-align: left;
+            text-decoration: none;
+            color: $color-navy;
+            outline: none;
+
+            &:hover {
+                color: $color-blue;
+            }
+
+            &.image {
+                text-indent: 260px;
+                float: left;
+                display: block;
+                background-position: left middle;
+                background-size: contain;
+                background-repeat: no-repeat;
+                overflow: hidden;
+                max-width: 240px;
+                height: 40px;
+
+                &.square {
+                    margin-top: 5px;
+                    margin-bottom: 15px;
+                    height: 60px;
+                    line-height: 60px;
+                }
+
+                @media #{$small} {
+                    text-indent: 220px;
+                    max-width: 200px;
+                    height: 30px;
+
+                    &.square {
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        height: 50px;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    nav.top {
+        float: right;
+
+        ul {
+            li {
+                float: left;
+            }
+        }
+
+        a,
+        a:link,
+        a:visited {
+            font-weight: medium;
+            text-decoration: none;
+            color: $color-dark-gray;
+            font-size: 1em;
+            line-height: $navigation-height - 2px;
+            height: $navigation-height - 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: block;
+            outline: none;
+            border-top: 2px solid transparent;
+
+            &.give-button {
+                padding: 2px 16px 0px 16px;
+                margin: 32px 10px 30px 10px;
+                height: 28px;
+                line-height: 28px;
+                border-top: 0;
+                border-radius: 8px;
+
+                @include button-color($color-purple, $color-white);
+
+                @media #{$small} {
+                    margin: 35px 10px 30px 10px;
+                    height: 24px;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        a:hover,
+        a:active {
+            color: $color-blue;
+            background-color: $color-white;
+            border-top: 2px solid $color-purple;
+        }
+    }
+}

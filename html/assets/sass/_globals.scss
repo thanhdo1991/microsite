@@ -1,0 +1,96 @@
+// Breakpoints
+$tiny-breakpoint: 360px;
+$small-breakpoint: 580px;
+$medium-breakpoint: 900px;
+$large-breakpoint: 1240px;
+
+// Media queries
+$large: "only screen and (min-width: #{$large-breakpoint})";
+$medium: "only screen and (max-width: #{$medium-breakpoint})";
+$small: "only screen and (max-width: #{$small-breakpoint})";
+$tiny: "only screen and (max-width: #{$tiny-breakpoint})";
+
+// Neat settings
+$neat-grid: (
+  columns: 6,
+  gutter: 40px,
+);
+
+$small-grid: (
+  columns: 6,
+  gutter: 20px
+);
+
+$touching-grid: (
+  columns: 1,
+  gutter: 0
+);
+
+$page-width: 1420px;
+
+// Mark Pro Typeface
+$cachet: (
+  "Cachet Std",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Helvetica Neue",
+  "Helvetica",
+  "Roboto",
+  "Noto",
+  "Ubuntu",
+  sans-serif
+);
+
+$sans-serif: (
+  -apple-system,
+  BlinkMacSystemFont,
+  "Helvetica Neue",
+  "Helvetica",
+  "Roboto",
+  "Noto",
+  "Ubuntu",
+  sans-serif
+);
+
+// Colors
+$color-white: #ffffff;
+$color-black: #333333;
+$color-blue: #00ADF2;
+$color-navy: #0C62AD;
+$color-red: #EB2F3A;
+$color-violet: #8F298B;
+$color-purple: #C31C8A;
+$color-orange: #F27328;
+$color-teal: #24AD9A;
+$color-gray: #a8a8a8;
+$color-bluegray: #00172A;
+
+// Spacing variables
+$spacing: 40px;
+$spacing-large: 60px;
+$spacing-small: 30px;
+
+
+@-webkit-keyframes ymca-one {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+
+@-moz-keyframes ymca-one {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+
+@-o-keyframes ymca-one {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+
+@keyframes ymca-one {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}

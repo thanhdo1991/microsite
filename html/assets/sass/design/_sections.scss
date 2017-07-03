@@ -1,0 +1,158 @@
+// Sections specific styles
+$layer-overlap: 100px;
+
+#intro {
+    background-position: center center;
+    background-size: cover;
+    box-shadow: inset 0px 100px 300px -100px rgba($color-bluegray, 0.5), inset 0px 10px 20px -10px rgba($color-bluegray, .7);
+    padding-top: 160px;
+    padding-bottom: 160px;
+    color: $color-white;
+
+    @media #{$large} {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+    @media #{$medium} {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @media #{$small} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &.lower-layer {
+        padding-bottom: 160px + $layer-overlap;
+        margin-bottom: 0;
+
+        @media #{$large} {
+            padding-bottom: 200px + $layer-overlap;
+        }
+
+        @media #{$medium} {
+            padding-bottom: 90px + $layer-overlap;
+        }
+
+        @media #{$small} {
+            padding-bottom: 30px + $layer-overlap;
+        }
+    }
+
+    h1 {
+        font-size: 3.8em;
+        font-weight: 400;
+        margin-bottom: .1em;
+        line-height: 1.4;
+
+        @media #{$large} {
+            font-size: 4.2em;
+        }
+
+        @media #{$medium} {
+            font-size: 3em;
+            text-shadow: 0px 1px 3px rgba($color-bluegray, 0.7);
+        }
+
+        @media #{$small} {
+            font-size: 2.8em;
+            font-weight: 500;
+        }
+    }
+
+    p {
+        font-family: $sans-serif;
+        font-size: 1.2em;
+        margin-bottom: 2em;
+
+        @media #{$large} {
+            font-size: 1.4em;
+        }
+
+        @media #{$medium} {
+            font-size: 1em;
+            text-shadow: 0px 1px 3px rgba($color-bluegray, 0.5);
+        }
+
+        @media #{$small} {
+            font-size: 1em;
+        }
+    }
+    
+    .fine-print {
+        margin-top: 1.2em;
+        font-family: $sans-serif;
+        font-size: .75em;
+
+        @media #{$medium} {
+            text-shadow: 0px 1px 3px rgba($color-bluegray, 0.5);
+        }
+    }
+}
+
+#intro-block {
+    text-align: center;
+    padding-bottom: 20px;
+    
+    @media #{$medium} {
+        padding-bottom: 0;
+    }
+    
+    &.upper-layer {
+        margin-top: -($layer-overlap * 2);
+        padding-top: 4em;
+
+        @media #{$large} {
+            margin-top: -($layer-overlap + 100px);
+        }
+
+        @media #{$medium} {
+            margin-top: -($layer-overlap + 40px);
+        }
+
+        @media #{$small} {
+            margin-top: -($layer-overlap + 10px);
+        }
+    }
+
+    .block {
+        display: block;
+        width: 100%;
+        background-color: $color-white;
+        padding: 60px 80px;
+        padding-bottom: 50px;
+
+        @media #{$medium} {
+            padding: 60px 40px;
+            padding-bottom: 50px;
+        }
+
+        @media #{$small} {
+            padding: 30px 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .shadow {
+        box-shadow: 0 0 20px rgba($color-black, .2);
+    }
+
+    h2, h3, h4 {
+        color: $color-blue;
+    }
+
+    p {
+        font-size: 1.2em;
+
+        @media #{$medium} {
+            font-size: 1em;
+        }
+    }
+}
+
+#grid {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

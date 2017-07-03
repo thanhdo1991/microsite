@@ -1,0 +1,125 @@
+$navigation-height: 62px;
+
+// Navigation style
+#main-navigation {
+    background-color: rgba($color-navy, 0.95);
+    @include clearfix();
+    display: block;
+    width: 100%;
+    height: $navigation-height;
+    padding: 0;
+    margin: 0;
+
+    @media #{$medium} {
+        height: $navigation-height - 10px;
+    }
+
+    .container {
+        @include grid-container;
+        max-width: $page-width;
+        margin: 0 auto;
+    }
+
+    ul.navbar,
+    ul.level-one,
+    ul.level-1 {
+        height: $navigation-height;
+        line-height: $navigation-height;
+        list-style: none;
+        @include grid-column(6);
+
+        @media #{$medium} {
+            height: $navigation-height - 10px;
+            line-height: $navigation-height - 10px;
+
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+
+        > li {
+            width: 18.5%;
+            float: left;
+            margin: 2px 0 0 0;
+
+            &.programs-and-classes {
+                width: 26%;
+
+                @media #{$medium} {
+                    width: 30%;
+                }
+
+                @media #{$small} {
+                    width: 31%;
+                }
+            }
+
+            &.membership {
+                width: 21%;
+
+                @media #{$medium} {
+                    width: 20%;
+                }
+
+                @media #{$small} {
+                    width: 19.5%;
+                }
+            }
+
+            &.more {
+                width: 15%;
+
+                @media #{$medium} {
+                    width: 13%;
+                }
+
+                @media #{$small} {
+                    width: 12.5%;
+                }
+            }
+
+            a,
+            a:link,
+            a:visited {
+                width: 100%;
+                display: block;
+                text-align: center;
+                line-height: $navigation-height - 2px;
+                height: $navigation-height - 2px;
+                color: $color-white;
+                font-weight: 300;
+                margin-left: 0;
+                text-decoration: none;
+                outline: none;
+
+                @media #{$medium} {
+                    font-size: 1em;
+                    font-weight: 400;
+                    line-height: $navigation-height - 10px - 2px;
+                    height: $navigation-height - 10px - 2px;
+                }
+
+                @media #{$small} {
+                    font-size: 1em;
+                    font-weight: 200;
+                    line-height: $navigation-height - 10px - 2px;
+                    height: $navigation-height - 10px - 2px;
+                }
+
+                @media #{$tiny} {
+                    font-size: .9em;
+                    letter-spacing: -.5px;
+                }
+            }
+
+            a:hover,
+            a:active {
+                background-color: rgba($color-white, .18);   
+            }
+        }
+    }
+
+    li.has-dropdown ul.dropdown {
+        display: none;
+    }
+}

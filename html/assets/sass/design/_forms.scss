@@ -1,0 +1,5 @@
+#{$all-buttons} {
+    &.colors {
+        @include button-color($color-black);
+    }
+}
